@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title of the webpage -->
+        <title>Assignment 4</title>
+        <!-- Character encoding for the document -->
+        <meta charset="UTF-8">
+        <!-- Author of the document -->
+        <meta name="author" content="Reginald Kotey Appiah-Sekyere and Abbad Muhammed">
+        <!-- Description of the document -->
+        <meta name="description" content="A video on how creating the video is.">
+        <!-- Viewport settings for responsive design -->
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Favicon for the webpage -->
+        <link rel="icon" href="./media/favicon.png">
+        <!-- Link to external JavaScript file, loaded asynchronously -->
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <section id="entrance">
+            <img src="./media/entrance1.jpg" class="entrancebackground">
+            <img onclick="about()" src="./media/moreinfo.png"class="info">
+            <img onclick="contact()" src="./media/billboard.png" class="billboard">
+            <img onclick="theater()" src="./media/door.png" class="door">
+        </section>
+        <section id="theater">
+            <div class="video-container">
+                <video id="localVideo" controls autoplay muted>
+                    <source src="media/Part 1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <button id="lens" class="lens"></button>
+            <div class="buttons" id="playButton">
+                <div id="optionPanel" class="optionPanel">
+                    <button id="option1" class="option"></button>
+                    <button id="option2" class="option middleOption"></button>
+                    <button id="option3" class="option"></button>
+                </div>    
+            </div>
+            <img src="./media/cinema1.jpg" class="theaterbackground">
+            <img onclick="theaterback()" src="./media/exithover.png" class="exit">
+            <div class="darkenexit"></div>
+        </section>
+        <section id="about">
+            <img src="./media/aboutbackground.jpeg" class="aboutbackground">
+            <img onclick="aboutback()" src="./media/returnbtn.png" class="return">
+            <div class="text">
+                <h2>About</h2>
+                <p>Welcome to Interactive Filmmaking, where you're not just a viewer, but a key player in the creative process! Our website features an engaging, interactive video that takes you behind the scenes of our movie-making adventure. As you watch, you'll encounter choices that impact the storyline, the characters' actions, and even the outcome of the film. Whether you're deciding on the next scene, choosing the perfect location, or guiding the actors' performances, your decisions shape the movie's journey.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <img src="./media/contactbackground.jpg" class="contactbackground">
+            <img onclick="contactback()" src="./media/exit.png" class="back">
+            <div class="team">
+                <div class="team-members">
+                    <h2>Zayed Muhammed</h2>
+                    <img src="./media/aboutbackground.jpeg" class="zayed">
+                    <a href="https://www.instagram.com/zk.altamimi?igsh=MTZ4eXExcnh4ZTR0Nw=="><img src="./media/instagramicon.png" class="instagram"></a>
+                    <a href="https://github.com/ZayedKT"><img src="./media/githubicon.png" class="github"></a>
+                </div>
+                <div class="team-members">
+                    <h2>Abbad Shazly</h2>
+                    <img src="./media/abbadpic.jpg" class="abbad">
+                    <a href="https://www.instagram.com/abbadshazly?igsh=MThqeWd1OGNqbGhvOA%3D%3D&utm_source=qr"><img src="./media/instagramicon.png" class="instagram"></a>
+                    <a href="https://github.com/Abbad04"><img src="./media/githubicon.png" class="github"></a>
+                </div>
+                <div class="team-members">
+                    <h2>Reginald Kotey</h2>
+                    <img src="./media/rekaspic.jpg" class="rekas">
+                    <a href="https://www.instagram.com/_r.e.k.a.s_?igsh=aGEzYzlhc3Rhd2Rz"><img src="./media/instagramicon.png" class="instagram"></a>
+                    <a href="https://github.com/itsRekas"><img src="./media/githubicon.png" class="github"></a>
+                </div>
+                <div class="team-members">
+                    <h2>Lincoln Ahiadu</h2>
+                    <img src="./media/linxpic.jpg" class="linx">
+                    <a href="https://www.instagram.com/ahiadulincoln?igsh=MXRvMG5yMzNvd21scA=="><img src="./media/instagramicon.png" class="instagram"></a>
+                    <a href="https://github.com/iLinx007"><img src="./media/githubicon.png" class="github"></a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
