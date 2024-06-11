@@ -44,6 +44,49 @@ const option3 = document.getElementById('option3');
 const options = document.getElementById('optionPanel');
 let decisionTimeout;
 
+// Preload video function
+function preloadVideo(src) {
+    return new Promise((resolve, reject) => {
+        const video = document.createElement('video');
+        video.preload = 'auto';
+        video.src = src;
+
+        video.oncanplaythrough = () => {
+            resolve(video);
+        };
+
+        video.onerror = () => {
+            reject(new Error(`Failed to load video: ${src}`));
+        };
+
+        // Start loading the video
+        video.load();
+    });
+}
+
+function preloadVideos(videoSources) {
+    return Promise.all(videoSources.map(preloadVideo));
+}
+
+const videoSources = [
+    './media/part 2.mp4',
+    './media/part 3.mp4',
+    './media/part 4.mp4',
+    './media/part 5.mp4',
+    './media/part 6.mp4',
+    './media/part 7.mp4',
+    './media/part 8.mp4'
+];
+
+preloadVideos(videoSources)
+    .then((videos) => {
+        console.log('All videos preloaded');
+        setupInitialEventListeners();
+    })
+    .catch((error) => {
+        console.error('Error preloading videos:', error);
+    });
+
 
 // Show decision panel for first decision
 function showFirstDecisionPanel() {
