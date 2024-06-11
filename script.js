@@ -92,7 +92,6 @@ function handleFirstOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
     video.src = "./media/part7.mp4";
-    video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
         resetVideoTo("./media/Part2.mp4", 33, showFirstDecisionPanel);
@@ -105,7 +104,6 @@ function handleFirstOption2Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
     video.src = "./media/Part4.mp4";
-    video.load();
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
         if (Math.floor(video.currentTime) === 76) {
@@ -120,7 +118,6 @@ function handleFirstOption3Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
     video.src = "./media/Part3.mp4";
-    video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
         resetVideoTo("./media/Part2.mp4", 33, showFirstDecisionPanel);
@@ -133,7 +130,6 @@ function handleSecondOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
     video.src = "./media/part8.mp4";
-    video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
         location.reload(); // Refresh the webpage
@@ -157,7 +153,6 @@ function handleSecondOption3Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
     video.src = "./media/Part5.mp4";
-    video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
         resetVideoTo("./media/Part4.mp4", 76, showSecondDecisionPanel);
@@ -171,7 +166,6 @@ function resetVideoTo(src, time, showDecisionPanel) {
     video.load();
     video.addEventListener('loadeddata', function onLoadedData() {
         video.currentTime = time;
-        video.load();
         video.play();
         showDecisionPanel();
         video.removeEventListener('loadeddata', onLoadedData);
@@ -182,7 +176,6 @@ function resetVideoTo(src, time, showDecisionPanel) {
 lens.addEventListener('click', function() {
     lens.style.display = "none";
     video.src = "./media/Part2.mp4";
-    video.load();
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
         if (Math.floor(video.currentTime) === 33) {
