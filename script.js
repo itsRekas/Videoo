@@ -91,7 +91,7 @@ function setupSecondDecisionListeners() {
 function handleFirstOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "./media/Part7.mp4";
+    video.src = "./media/part7.mp4";
     video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
@@ -132,7 +132,7 @@ function handleFirstOption3Click() {
 function handleSecondOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "./media/Part8.mp4";
+    video.src = "./media/part8.mp4";
     video.load();
     video.play();
     video.addEventListener('ended', function onEnded() {
@@ -181,7 +181,7 @@ function resetVideoTo(src, time, showDecisionPanel) {
 // Initial setup
 lens.addEventListener('click', function() {
     lens.style.display = "none";
-    video.src = "media/Part2.mp4";
+    video.src = "./media/Part2.mp4";
     video.load();
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
