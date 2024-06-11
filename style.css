@@ -1,233 +1,297 @@
+/* Importing the Ubuntu font family from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-*{
-    margin:0;
-    padding:0;
+
+/* Applying default margin and padding to all elements */
+* {
+    margin: 0;
+    padding: 0;
 }
+
+/* Initially hiding the theater, about, and contact sections */
 #theater,
 #about,
-#contact{
-    display:none;
+#contact {
+    display: none;
 }
+
+/* Setting the height, width, and overflow for entrance, theater, about, and contact sections */
 #entrance,
 #theater,
 #about,
-#contact{
+#contact {
     height: 100vh;
-    width:100%;
-    overflow:hidden;
+    width: 100%;
+    overflow: hidden;
 }
+
+/* Styling for background images of various sections */
 .entrancebackground,
 .aboutbackground,
 .theaterbackground,
-.contactbackground{
-    width:100%;
-    height:100%;
+.contactbackground {
+    width: 100%;
+    height: 100%;
 }
+
+/* Adding a semi-transparent overlay for entrance and contact sections */
 #entrance::before,
-#contact::before{
-    content:'';
+#contact::before {
+    content: '';
     background-color: rgba(0, 0, 0, 0.675);
-    width:100%;
-    height:100vh;
-    position:absolute;
-    z-index:1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
 }
-.info{
-    position:absolute;
-    z-index:2;
-    width:11vw;
-    height:24.7vh;
-    top:51.1vh;
-    left:11vw;
+
+/* Positioning and styling info button */
+.info {
+    position: absolute;
+    z-index: 2;
+    width: 11vw;
+    height: 24.7vh;
+    top: 51.1vh;
+    left: 11vw;
     opacity: 0;
 }
-.door{
-    position:absolute;
-    z-index:2;
-    width:11vw;
-    height:16vh;
-    top:55vh;
-    left:42.5vw;
+
+/* Positioning and styling door button */
+.door {
+    position: absolute;
+    z-index: 2;
+    width: 11vw;
+    height: 16vh;
+    top: 55vh;
+    left: 42.5vw;
     opacity: 0;
 }
-.billboard{
-    position:absolute;
-    z-index:2;
-    width:11vw;
-    height:24.4vh;
-    top:50vh;
-    left:77vw;
+
+/* Positioning and styling billboard button */
+.billboard {
+    position: absolute;
+    z-index: 2;
+    width: 11vw;
+    height: 24.4vh;
+    top: 50vh;
+    left: 77vw;
     opacity: 0;
 }
+
+/* Adding hover effect to billboard, info, and door buttons */
 .billboard:hover,
 .info:hover,
-.door:hover{
-    opacity:1;
-    cursor:pointer;
-}
-.darkenexit{
-    background-color: rgba(0, 0, 0, 0.519);
-    height:8vh;
-    width:10vw;
-    z-index:1;
-    top:0vh;
-    position:absolute;
-}
-.exit{
-    position:absolute;
-    z-index:2;
-    width: 13.1vw;
-    height:10vh;
-    top:-0.3vh;
-    left:-2.08vw;
-    opacity: 0;
-    transition:ease 1s;
-}
-.exit:hover{
-    opacity:1;
+.door:hover {
+    opacity: 1;
     cursor: pointer;
 }
-.team{
-    position:absolute;
-    z-index:3;
-    height:50vh;
-    width:100%;
-    display:grid;
+
+/* Styling for the darken exit button */
+.darkenexit {
+    background-color: rgba(0, 0, 0, 0.519);
+    height: 8vh;
+    width: 10vw;
+    z-index: 1;
+    top: 0vh;
+    position: absolute;
+}
+
+/* Positioning and styling exit button */
+.exit {
+    position: absolute;
+    z-index: 2;
+    width: 13.1vw;
+    height: 10vh;
+    top: -0.3vh;
+    left: -2.08vw;
+    opacity: 0;
+    transition: ease 1s;
+}
+
+/* Adding hover effect to exit button */
+.exit:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Styling for the team section and members */
+.team {
+    position: absolute;
+    z-index: 3;
+    height: 50vh;
+    width: 100%;
+    display: grid;
     grid-template-columns: auto auto auto auto;
-    top:50%;
-    transform:translate(0,-50%);
-    color:white;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
     text-align: center;
 }
-.team-members{
-    margin-left:0.5vw;
-    background:rgba(0, 0, 0, 0.818);
-    padding:2vw;
+
+/* Styling for individual team members */
+.team-members {
+    margin-left: 0.5vw;
+    background: rgba(0, 0, 0, 0.818);
+    padding: 2vw;
     border-radius: 3vw;
-    width:20vw;
-    height:40vh;
+    width: 20vw;
+    height: 40vh;
     transition: ease 0.8s;
 }
-.team-members:hover{
+
+/* Adding hover effect to team members */
+.team-members:hover {
     background-color: black;
-    transform:translate(0,-20%);
+    transform: translate(0, -20%);
 }
-.team-members .github{
-    position:relative;
-    top:14%;
-    left:20%;
-    width:4.5vw;
+
+/* Styling for GitHub and Instagram icons within team members */
+.team-members .github {
+    position: relative;
+    top: 14%;
+    left: 20%;
+    width: 4.5vw;
     transition: ease 0.5s;
 }
-.team-members .instagram{
-    position:relative;
-    top:37.5%;
-    left:-50%;
-    width:4.5vw;
+
+.team-members .instagram {
+    position: relative;
+    top: 37.5%;
+    left: -50%;
+    width: 4.5vw;
     transition: ease 0.5s;
 }
+
+/* Adding hover effect to GitHub and Instagram icons */
 .team-members .github:hover,
-.instagram:hover{
+.instagram:hover {
     transform: scale(1.2);
 }
+
+/* Styling for individual team member images */
 .zayed,
 .rekas,
 .abbad,
-.linx{
-    width:12vw;
-    height:25vh;
-    top:8%;
-    left:12%;
-    position:relative;
+.linx {
+    width: 12vw;
+    height: 25vh;
+    top: 8%;
+    left: 12%;
+    position: relative;
     border-radius: 1vw;
 }
-.back{
-    position:absolute;
-    top:5vh;
-    left:45vw;
-    z-index:3;
-    opacity:0.8;
+
+/* Styling for the back button */
+.back {
+    position: absolute;
+    top: 5vh;
+    left: 45vw;
+    z-index: 3;
+    opacity: 0.8;
     transition: ease 0.2s;
-    width:10vw;
-    height:10vh;
+    width: 10vw;
+    height: 10vh;
     border-radius: 3vw;
 }
-.back:hover{
-    opacity:1;
+
+/* Adding hover effect to the back button */
+.back:hover {
+    opacity: 1;
     cursor: pointer;
 }
-.text{
-    width:30vw;
-    height:30vh;
-    position:absolute;
+
+/* Styling for text within the about section */
+.text {
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
     z-index: 3;
-    top:28vh;
-    left:60vw;
-    color:black;
+    top: 28vh;
+    left: 60vw;
+    color: black;
     text-align: center;
 }
-.text p{
-    position:relative;
-    top:12%;
+
+/* Styling for paragraphs within the text section */
+.text p {
+    position: relative;
+    top: 12%;
     font-family: "Ubuntu", sans-serif;
     font-size: calc(0.7vh + 0.7vw);
 }
-.return{
-    position:absolute;
-    top:2vh;
-    left:2vw;
-    opacity:0.7;
+
+/* Styling for the return button */
+.return {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    opacity: 0.7;
     transition: ease 0.4s;
 }
-.return:hover{
-    opacity:1;
+
+/* Adding hover effect to the return button */
+.return:hover {
+    opacity: 1;
     cursor: pointer;
 }
+
+/* Media query for screen sizes less than 1000px */
 @media only screen and (max-width: 1000px) {
-    .team{
+    /* Adjusting grid layout for team section */
+    .team {
         grid-template-columns: auto auto;
     }
-    .team-members{
-        margin-left:8%;
-        width:40vw;
-        height:25vh;
+
+    /* Adjusting styling for team members */
+    .team-members {
+        margin-left: 8%;
+        width: 40vw;
+        height: 25vh;
         margin-bottom: 10vh;
     }
-    .team-members .github{
-        position:relative;
-        top:15%;
-        left:20%;
-        width:8vw;
+
+    /* Adjusting styling for GitHub icon within team members */
+    .team-members .github {
+        position: relative;
+        top: 15%;
+        left: 20%;
+        width: 8vw;
         transition: ease 0.5s;
     }
-    .team-members .instagram{
-        position:relative;
-        top:31.5%;
-        left:-60%;
-        width:8vw;
+
+    /* Adjusting styling for Instagram icon within team members */
+    .team-members .instagram {
+        position: relative;
+        top: 31.5%;
+        left: -60%;
+        width: 8vw;
     }
+
+    /* Adjusting styling for individual team member images */
     .zayed,
     .rekas,
     .abbad,
-    .linx{
-        width:25vw;
-        height:10vh;
-        top:8%;
-        left:13%;
+    .linx {
+        width: 25vw;
+        height: 10vh;
+        top: 8%;
+        left: 13%;
     }
-    .back{
-        position:absolute;
-        top:5vh;
-        left:42vw;
-        z-index:3;
-        opacity:0.8;
+
+    /* Adjusting styling for the back button */
+    .back {
+        position: absolute;
+        top: 5vh;
+        left: 42vw;
+        z-index: 3;
+        opacity: 0.8;
         transition: ease 0.2s;
-        width:20vw;
-        height:8vh;
+        width: 20vw;
+        height: 8vh;
         border-radius: 3vw;
     }
 }
 
+/* Styling for the body element */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -238,6 +302,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Styling for the video container */
 .video-container {
     position: absolute;
     top: 13%;
@@ -255,7 +320,8 @@ body {
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-.buttons{
+/* Styling for the buttons container */
+.buttons {
     position: absolute;
     top: 7%;
     left: 25%;
@@ -271,13 +337,15 @@ body {
     display: none;
 }
 
+/* Styling for the video element */
 video {
     width: 100%;
     height: 100%;
     border: none;
 }
 
-.lens{
+/* Styling for the lens button */
+.lens {
     height: 7vh;
     width: 3vw;
     position: absolute;
@@ -285,10 +353,11 @@ video {
     right: 54%;
     background-color: transparent;
     border: none;
-    display:none;
+    display: none;
 }
 
-.lens:hover{
+/* Adding hover effect to the lens button */
+.lens:hover {
     border-style: solid;
     border-width: 3px;
     border-radius: 5%;
@@ -296,7 +365,8 @@ video {
     cursor: pointer;
 }
 
-.optionPanel{
+/* Styling for the option panel */
+.optionPanel {
     margin: 26.5% 18% 0 auto;
     width: 65%;
     height: 30%;
@@ -306,18 +376,21 @@ video {
     justify-content: space-between;
 }
 
-.option{
+/* Styling for individual options within the option panel */
+.option {
     height: 100%;
     width: 30%;
     background-color: transparent;
-    border:none;
+    border: none;
 }
 
-.middleOption{
+/* Styling for the middle option */
+.middleOption {
     width: 33%;
 }
 
-.option:hover{
+/* Adding hover effect to options */
+.option:hover {
     border-style: solid;
     border-color: white;
     border-width: 3px;

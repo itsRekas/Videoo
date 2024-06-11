@@ -19,63 +19,95 @@
         <script defer src="script.js"></script>
     </head>
     <body>
+        <!-- Entrance section with interactive images -->
         <section id="entrance">
+            <!-- Background image for the entrance section -->
             <img src="./media/entrance1.jpg" class="entrancebackground">
-            <img onclick="about()" src="./media/moreinfo.png"class="info">
+            <!-- Image with click event to show more info -->
+            <img onclick="about()" src="./media/moreinfo.png" class="info">
+            <!-- Image with click event to show contact info -->
             <img onclick="contact()" src="./media/billboard.png" class="billboard">
+            <!-- Image with click event to enter the theater section -->
             <img onclick="theater()" src="./media/door.png" class="door">
         </section>
+        
+        <!-- Theater section containing video and interactive elements -->
         <section id="theater">
             <div class="video-container">
+                <!-- Video element with controls and autoplay, initially muted -->
                 <video id="localVideo" controls autoplay muted>
+                    <!-- Source for the video element -->
                     <source src="./media/Part1.mp4" type="video/mp4">
                 </video>
+                <!-- Button overlay on the video -->
                 <button id="lens" class="lens"></button>
             </div>
             <div class="buttons" id="playButton">
                 <div id="optionPanel" class="optionPanel">
+                    <!-- Option buttons for interactive choices -->
                     <button id="option1" class="option"></button>
                     <button id="option2" class="option middleOption"></button>
                     <button id="option3" class="option"></button>
                 </div>    
             </div>
+            <!-- Background image for the theater section -->
             <img src="./media/cinema1.jpg" class="theaterbackground">
+            <!-- Image with click event to exit the theater section -->
             <img onclick="theaterback()" src="./media/exithover.png" class="exit">
+            <!-- Darkened exit area -->
             <div class="darkenexit"></div>
         </section>
+        
+        <!-- About section providing information on the project -->
         <section id="about">
+            <!-- Background image for the about section -->
             <img src="./media/aboutbackground.jpeg" class="aboutbackground">
+            <!-- Image with click event to return to previous section -->
             <img onclick="aboutback()" src="./media/returnbtn.png" class="return">
+            <!-- Text content for the about section -->
             <div class="text">
                 <h2>About</h2>
                 <p>Welcome to Interactive Filmmaking, where you're not just a viewer, but a key player in the creative process! Our website features an engaging, interactive video that takes you behind the scenes of our movie-making adventure. As you watch, you'll encounter choices that impact the storyline, the characters' actions, and even the outcome of the film. Whether you're deciding on the next scene, choosing the perfect location, or guiding the actors' performances, your decisions shape the movie's journey.</p>
             </div>
         </section>
+        
+        <!-- Contact section with team member details -->
         <section id="contact">
+            <!-- Background image for the contact section -->
             <img src="./media/contactbackground.jpg" class="contactbackground">
+            <!-- Image with click event to return to previous section -->
             <img onclick="contactback()" src="./media/exit.png" class="back">
+            <!-- Container for team member details -->
             <div class="team">
                 <div class="team-members">
+                    <!-- Team member Zayed Muhammed details -->
                     <h2>Zayed Muhammed</h2>
                     <img src="./media/aboutbackground.jpeg" class="zayed">
+                    <!-- Social media links for Zayed Muhammed -->
                     <a href="https://www.instagram.com/zk.altamimi?igsh=MTZ4eXExcnh4ZTR0Nw=="><img src="./media/instagramicon.png" class="instagram"></a>
                     <a href="https://github.com/ZayedKT"><img src="./media/githubicon.png" class="github"></a>
                 </div>
                 <div class="team-members">
+                    <!-- Team member Abbad Shazly details -->
                     <h2>Abbad Shazly</h2>
                     <img src="./media/abbadpic.jpg" class="abbad">
+                    <!-- Social media links for Abbad Shazly -->
                     <a href="https://www.instagram.com/abbadshazly?igsh=MThqeWd1OGNqbGhvOA%3D%3D&utm_source=qr"><img src="./media/instagramicon.png" class="instagram"></a>
                     <a href="https://github.com/Abbad04"><img src="./media/githubicon.png" class="github"></a>
                 </div>
                 <div class="team-members">
+                    <!-- Team member Reginald Kotey details -->
                     <h2>Reginald Kotey</h2>
                     <img src="./media/rekaspic.jpg" class="rekas">
+                    <!-- Social media links for Reginald Kotey -->
                     <a href="https://www.instagram.com/_r.e.k.a.s_?igsh=aGEzYzlhc3Rhd2Rz"><img src="./media/instagramicon.png" class="instagram"></a>
                     <a href="https://github.com/itsRekas"><img src="./media/githubicon.png" class="github"></a>
                 </div>
                 <div class="team-members">
+                    <!-- Team member Lincoln Ahiadu details -->
                     <h2>Lincoln Ahiadu</h2>
                     <img src="./media/linxpic.jpg" class="linx">
+                    <!-- Social media links for Lincoln Ahiadu -->
                     <a href="https://www.instagram.com/ahiadulincoln?igsh=MXRvMG5yMzNvd21scA=="><img src="./media/instagramicon.png" class="instagram"></a>
                     <a href="https://github.com/iLinx007"><img src="./media/githubicon.png" class="github"></a>
                 </div>
