@@ -51,7 +51,7 @@ function showFirstDecisionPanel() {
     setupFirstDecisionListeners();
     
     decisionTimeout = setTimeout(() => {
-        resetVideoTo("media/part 2.mp4", 33, showFirstDecisionPanel);
+        resetVideoTo("./media/part 2.mp4", 33, showFirstDecisionPanel);
     }, 10000); 
 }
 
@@ -68,7 +68,7 @@ function showSecondDecisionPanel() {
     setupSecondDecisionListeners();
     
     decisionTimeout = setTimeout(() => {
-        resetVideoTo("media/part 4.mp4", 76, showSecondDecisionPanel);
+        resetVideoTo("./media/part 4.mp4", 76, showSecondDecisionPanel);
     }, 10000);
 }
 
@@ -92,10 +92,10 @@ function setupSecondDecisionListeners() {
 function handleFirstOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 7.mp4";
+    video.src = "./media/part 7.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
-        resetVideoTo("media/part 2.mp4", 33, showFirstDecisionPanel);
+        resetVideoTo("./media/part 2.mp4", 33, showFirstDecisionPanel);
         video.removeEventListener('ended', onEnded);
     });
 }
@@ -104,7 +104,7 @@ function handleFirstOption1Click() {
 function handleFirstOption2Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 4.mp4";
+    video.src = "./media/part 4.mp4";
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
         if (Math.floor(video.currentTime) === 76) {
@@ -118,10 +118,10 @@ function handleFirstOption2Click() {
 function handleFirstOption3Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 3.mp4";
+    video.src = "./media/part 3.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
-        resetVideoTo("media/part 2.mp4", 33, showFirstDecisionPanel);
+        resetVideoTo("./media/part 2.mp4", 33, showFirstDecisionPanel);
         video.removeEventListener('ended', onEnded);
     });
 }
@@ -130,7 +130,7 @@ function handleFirstOption3Click() {
 function handleSecondOption1Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 8.mp4";
+    video.src = "./media/part 8.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
         location.reload(); // Refresh the webpage
@@ -141,10 +141,10 @@ function handleSecondOption1Click() {
 function handleSecondOption2Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 6.mp4";
+    video.src = "./media/part 6.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
-        resetVideoTo("media/part 4.mp4", 76, showSecondDecisionPanel);
+        resetVideoTo("./media/part 4.mp4", 76, showSecondDecisionPanel);
         video.removeEventListener('ended', onEnded);
     });
 }
@@ -153,10 +153,10 @@ function handleSecondOption2Click() {
 function handleSecondOption3Click() {
     clearTimeout(decisionTimeout);
     overlayer.style.display = "none";
-    video.src = "media/part 5.mp4";
+    video.src = "./media/part 5.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
-        resetVideoTo("media/part 4.mp4", 76, showSecondDecisionPanel);
+        resetVideoTo("./media/part 4.mp4", 76, showSecondDecisionPanel);
         video.removeEventListener('ended', onEnded);
     });
 }
@@ -176,7 +176,7 @@ function resetVideoTo(src, time, showDecisionPanel) {
 // Initial setup
 lens.addEventListener('click', function() {
     lens.style.display = "none";
-    video.src = "media/part 2.mp4";
+    video.src = "./media/part 2.mp4";
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
         if (Math.floor(video.currentTime) === 33) {
