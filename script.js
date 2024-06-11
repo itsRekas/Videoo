@@ -181,7 +181,7 @@ function resetVideoTo(src, time, showDecisionPanel) {
 // Initial setup
 lens.addEventListener('click', function() {
     lens.style.display = "none";
-    video.src = "./media/Part2.mp4";
+    video.src = "media/Part2.mp4";
     video.load();
     video.play();
     video.addEventListener('timeupdate', function onTimeUpdate() {
