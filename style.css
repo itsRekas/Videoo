@@ -293,6 +293,7 @@ video {
     border-width: 3px;
     border-radius: 5%;
     border-color: yellow;
+    cursor: pointer;
 }
 
 .optionPanel{
@@ -321,4 +322,5 @@ video {
     border-color: white;
     border-width: 3px;
     border-radius: 5%;
+    cursor: pointer;
 }
