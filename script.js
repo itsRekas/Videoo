@@ -78,12 +78,11 @@ function setupSecondDecisionListeners() {
     option3.onclick = handleSecondOption3Click;
 
     // Styling changes for second decision
-    option1.style.width = "35%";
-    option1.style.marginRight = "2.5%"
-    option2.style.width = "30%";
-    option3.style.width = "35%";
-    option3.style.marginLeft = "2.5%"
-    options.style.width = "80%";
+    option1.style.width = "40%";
+    option1.style.marginLeft = "-4%"
+    option2.style.width = "40%";
+    option3.style.width = "38%";
+    option2.style.marginRight = "0%"
 
 }
 
@@ -94,7 +93,7 @@ function handleFirstOption1Click() {
     video.src = "./media/part7.mp4";
     video.play();
     video.addEventListener('ended', function onEnded() {
-        resetVideoTo("./media/Part2.mp4", 33, showFirstDecisionPanel);
+        resetVideoTo("./media/Part2.mp4", 32, showFirstDecisionPanel);
         video.removeEventListener('ended', onEnded);
     });
 }
